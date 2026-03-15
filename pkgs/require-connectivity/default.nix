@@ -107,8 +107,8 @@ EOF
     if [[ -f "$REBOOT_STATE_FILE" ]]; then
       # shellcheck source=/dev/null
       . "$REBOOT_STATE_FILE"
-      connectivity_reboot_count="${CONNECTIVITY_REBOOT_COUNT:-0}"
-      last_reboot_was_connectivity="${LAST_REBOOT_WAS_CONNECTIVITY:-0}"
+      connectivity_reboot_count="''${CONNECTIVITY_REBOOT_COUNT:-0}"
+      last_reboot_was_connectivity="''${LAST_REBOOT_WAS_CONNECTIVITY:-0}"
     fi
 
     if [[ -f "$PENDING_REBOOT_FILE" ]]; then
